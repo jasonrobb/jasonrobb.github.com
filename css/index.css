@@ -38,13 +38,16 @@ body {
   background-image: url("../assets/edge.bottom.png");
   background-position: -50% 100%;
   background-repeat: repeat-x;
+  font-size: .75em;
   height: 35px;
-  padding: .25em 1em;
+  padding: .75em 1em .25em;
+}
+.header p {
+  margin: 0;
 }
 .header a {
   border: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: .75em;
   text-decoration: none;
 }
 .header a:hover {
@@ -93,7 +96,12 @@ h1 small {
   margin-top: 6px;
 }
 h1 a {
+  border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.7);
+}
+h1 a:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.8);
 }
 h2 {
   color: #2c7a68;
@@ -224,7 +232,6 @@ hr {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin-top: 27px;
   max-width: 100%;
   overflow: hidden;
 }
