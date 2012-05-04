@@ -1,0 +1,139 @@
+// ========================
+// 3D-text.less - for index
+// ========================
+
+
+@import "colors.less"; // because it's always needed
+
+
+
+
+// Color variables
+@green:		#4dbfa4;
+@red:		#c33;
+@blue:		#09c;
+@yellow:	#fd0;
+
+
+
+
+// Vertical gradient
+.vertical-three-colors(@startColor: #c33, @midColor: #cc4d33, @colorStop: 50%, @endColor: #cc6633) {
+	background-color: mix(@midColor, @endColor, 80%);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+	background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+	background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+	background-image: -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+	background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+	background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+	background-repeat: no-repeat;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+
+
+// Rainbow 3-D text
+.rain(@color: @red) {
+	color: @color;
+	text-shadow: -1px 0 1px lighten(@color, 10%),
+		1px 0 1px lighten(@color, 10%),
+		
+		-1px 1px 0 darken(@color, 5%),
+		-1px 2px 0 darken(@color, 6%),
+		-1px 3px 0 darken(@color, 7%),
+		-1px 4px 0 darken(@color, 8%),
+		-1px 5px 1px darken(@color, 15%),
+		
+		1px 1px 0 darken(@color, 5%),
+		1px 2px 0 darken(@color, 6%),
+		1px 3px 0 darken(@color, 7%),
+		1px 4px 0 darken(@color, 8%),
+		1px 5px 1px darken(@color, 15%),
+		
+		0 6px 4px mix(@color, (fade(#fff, 60%)), 60%),
+		
+		0 -6px 8px fade(#000, 2%),
+		0 6px 6px fade(#000, 30%),
+		0 8px 16px fade(#000, 20%);
+}
+
+
+// 3D-text
+.text-3d {
+
+	.download div a {
+		//background-image: url("../assets/icons/coda-less.png");
+		}
+
+	.example {
+		@color: @yellow;
+		.vertical-three-colors(fadeout(@color, 90), fadeout(spin(@color, -20), 90), 50%, fadeout(spin(@color, -40), 90));
+		height: 230px;
+		
+			a {
+				display: block;
+				height: 230px;
+				}
+		}
+	
+	// Make it rain
+	h1 {
+		font-size: 4em;
+		line-height: 1.1;
+		margin: 0;
+		padding: 0;
+		padding-top: .65em;
+		text-align: center;
+		
+		// set the start color
+		@color: @red;
+		
+		.char1 {
+			.rain(@color);
+		}
+		.char2 {
+			.rain(spin(@color, 2));
+		}
+		.char3 {
+			.rain(spin(@color, 4));
+		}
+		.char4 {
+			.rain(spin(@color, 6));
+		}
+		.char5 {
+			.rain(spin(@color, 8));
+		}
+		.char6 {
+			.rain(spin(@color, 10));
+		}
+		.char7 {
+			.rain(spin(@color, 12));
+		}
+		.char8 {
+			.rain(spin(@color, 14));
+		}
+		.char9 {
+			.rain(spin(@color, 16));
+		}
+		.char10 {
+			.rain(spin(@color, 18));
+		}
+		.char11 {
+			.rain(spin(@color, 20));
+		}
+		.char12 {
+			.rain(spin(@color, 22));
+		}
+		.char13 {
+			.rain(spin(@color, 24));
+		}
+		.char14 {
+			.rain(spin(@color, 26));
+		}
+		.char15 {
+			.rain(spin(@color, 28));
+		}
+		.char16 {
+			.rain(spin(@color, 30));
+		}
+	}
+}
