@@ -687,35 +687,16 @@ hr {
   float: left;
   font-size: .9em;
   line-height: 1.125;
-  padding: .5em .25em 0 3.5em;
+  padding: .25em .25em 0 3.5em;
   width: auto;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  /*
-		// File
-		.file {
-			display: block; // override default
-			height: 0;
-			margin-left: -55px;
-			}
-
-		// Stack of files
-		.stack span:nth-child(1) {
-			margin-bottom: -7px;
-			margin-left: 8px;
-			}
-		
-		.stack span:nth-child(2) {
-			margin-left: -36px;
-			line-height: 1;
-			&:after {
-				content: "*";
-				}
-			}
-*/
-
+}
+.download a.button .file {
+  height: 24px;
+  margin-left: -55px;
 }
 .download a.button p {
   font-family: "OpenSans", Calibri, "Lucida Grande", Verdana, sans-serif;
@@ -746,24 +727,24 @@ hr {
   margin-bottom: 0;
 }
 .example {
-  background-color: rgba(77, 191, 118, 0.30000000000000004);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(77, 191, 164, 0.30000000000000004)), color-stop(50%, rgba(77, 191, 126, 0.30000000000000004)), to(rgba(77, 191, 88, 0.30000000000000004)));
-  background-image: -webkit-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -moz-linear-gradient(top, rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -ms-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -o-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
+  background-color: rgba(0, 204, 173, 0.30000000000000004);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 153, 204, 0.30000000000000004)), color-stop(50%, rgba(0, 204, 187, 0.30000000000000004)), to(rgba(0, 204, 119, 0.30000000000000004)));
+  background-image: -webkit-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -moz-linear-gradient(top, rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -ms-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -o-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(77, 191, 164, 0.30000000000000004)', endColorstr='rgba(77, 191, 88, 0.30000000000000004)', GradientType=0);
-  background-color: rgba(77, 191, 118, 0.30000000000000004);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(77, 191, 164, 0.30000000000000004)), color-stop(50%, rgba(77, 191, 126, 0.30000000000000004)), to(rgba(77, 191, 88, 0.30000000000000004)));
-  background-image: -webkit-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -moz-linear-gradient(top, rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -ms-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: -o-linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
-  background-image: linear-gradient(rgba(77, 191, 164, 0.30000000000000004), rgba(77, 191, 126, 0.30000000000000004) 50%, rgba(77, 191, 88, 0.30000000000000004));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 153, 204, 0.30000000000000004)', endColorstr='rgba(0, 204, 119, 0.30000000000000004)', GradientType=0);
+  background-color: rgba(0, 204, 173, 0.30000000000000004);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 153, 204, 0.30000000000000004)), color-stop(50%, rgba(0, 204, 187, 0.30000000000000004)), to(rgba(0, 204, 119, 0.30000000000000004)));
+  background-image: -webkit-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -moz-linear-gradient(top, rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -ms-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: -o-linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
+  background-image: linear-gradient(rgba(0, 153, 204, 0.30000000000000004), rgba(0, 204, 187, 0.30000000000000004) 50%, rgba(0, 204, 119, 0.30000000000000004));
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(77, 191, 164, 0.30000000000000004)', endColorstr='rgba(77, 191, 88, 0.30000000000000004)', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 153, 204, 0.30000000000000004)', endColorstr='rgba(0, 204, 119, 0.30000000000000004)', GradientType=0);
   -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
   -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
@@ -799,7 +780,8 @@ hr {
 .example .row .stack {
   margin-top: -10px;
   margin-bottom: -10px;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-left: 5px;
 }
 .example.inset {
   -webkit-box-shadow: inset 0 2px 50px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 2px 5px rgba(0, 0, 0, 0.1), inset 0 6px 10px rgba(0, 0, 0, 0.03);
