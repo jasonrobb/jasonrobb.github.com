@@ -200,15 +200,19 @@ h1, h2, h3 {
 
 h1 {
 	color: @red;
-	font-size: 4em;
+	font-size: 5em;
 	margin-top: .5em;
+	
+	span {
+		.rain(@red);
+		}
 	
 	small {
 		color: @black40;
 		font-size: 18px;
 		font-weight: normal;
 		margin-top: 6px;
-		margin-left: -.25em;
+		margin-left: -.75em;
 		}
 
 	a {
@@ -219,6 +223,41 @@ h1 {
 		border-color: @black50;
 		color: @black80;
 		}
+	
+	/*
+@color: @red;
+	.char1 {
+			.rain(@color);
+		}
+		.char2 {
+			.rain(spin(@color, 2));
+		}
+		.char3 {
+			.rain(spin(@color, 4));
+		}
+		.char4 {
+			.rain(spin(@color, 6));
+		}
+		.char5 {
+			.rain(spin(@color, 8));
+		}
+		.char6 {
+			.rain(spin(@color, 10));
+		}
+		.char7 {
+			.rain(spin(@color, 12));
+		}
+		.char8 {
+			.rain(spin(@color, 14));
+		}
+		.char9 {
+			.rain(spin(@color, 16));
+		}
+		.char10 {
+			.rain(spin(@color, 18));
+		}
+*/
+
 }
 
 h2 {

@@ -561,15 +561,53 @@ h3 {
 }
 h1 {
   color: #cc3333;
-  font-size: 4em;
+  font-size: 5em;
   margin-top: .5em;
+  /*
+@color: @red;
+	.char1 {
+			.rain(@color);
+		}
+		.char2 {
+			.rain(spin(@color, 2));
+		}
+		.char3 {
+			.rain(spin(@color, 4));
+		}
+		.char4 {
+			.rain(spin(@color, 6));
+		}
+		.char5 {
+			.rain(spin(@color, 8));
+		}
+		.char6 {
+			.rain(spin(@color, 10));
+		}
+		.char7 {
+			.rain(spin(@color, 12));
+		}
+		.char8 {
+			.rain(spin(@color, 14));
+		}
+		.char9 {
+			.rain(spin(@color, 16));
+		}
+		.char10 {
+			.rain(spin(@color, 18));
+		}
+*/
+
+}
+h1 span {
+  color: #cc3333;
+  text-shadow: -1px 0 1px #d65c5c, 1px 0 1px #d65c5c, -1px 1px 0 #b82e2e, -1px 2px 0 #b42d2d, -1px 3px 0 #af2c2c, -1px 4px 0 #ab2b2b, -1px 5px 1px #8f2424, 1px 1px 0 #b82e2e, 1px 2px 0 #b42d2d, 1px 3px 0 #af2c2c, 1px 4px 0 #ab2b2b, 1px 5px 1px #8f2424, 0 6px 4px rgba(215, 96, 96, 0.84), 0 -6px 8px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 h1 small {
   color: rgba(0, 0, 0, 0.4);
   font-size: 18px;
   font-weight: normal;
   margin-top: 6px;
-  margin-left: -0.25em;
+  margin-left: -0.75em;
 }
 h1 a {
   border-color: rgba(0, 0, 0, 0.3);
