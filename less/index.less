@@ -6,6 +6,15 @@
 @import "colors.less"; // because it's always needed!
 
 
+
+// Color variables
+@green:		#4dbfa4;
+@red:		#c33;
+@blue:		#09c;
+@yellow:	#fd0;
+
+
+
 // Vertical gradient
 .vertical-three-colors(@startColor: #c33, @midColor: #cc4d33, @colorStop: 50%, @endColor: #cc6633) {
 	background-color: mix(@midColor, @endColor, 80%);
@@ -110,25 +119,51 @@ th {
 
 
 
-// Color variables
-@green:		#4dbfa4;
-@red:		#c33;
-@blue:		#09c;
-@yellow:	#fd0;
+
+// Fonts
+#font {
+	#family {
+		.sans-serif() {
+			font-family: "OpenSans", Calibri, "Lucida Grande", Verdana, sans-serif;
+			}
+		.display() {
+			font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+			}
+		}
+	
+	.shorthand(@size: @baseFontSize, @lineHeight: @baseLineHeight, @weight: normal) {
+		font-size: @size;
+		font-weight: @weight;
+		line-height: @lineHeight;
+		}
+		
+	.sans-serif(@size: @baseFontSize, @lineHeight: @baseLineHeight, @weight: normal) {
+		#font > #family > .sans-serif;
+		#font > .shorthand(@size, @lineHeight, @weight);
+		}
+	
+	.display(@size: @baseFontSize, @lineHeight: @baseLineHeight, @weight: normal) {
+		#font > #family > .display;
+		#font > .shorthand(@size, @lineHeight, @weight);
+		}
+	}
 
 
+// Variables
+@baseFontSize: 18px;
+@baseLineHeight: 1.5;
 
 
 // Basics
 body {
 	background-color: #f2f0ed;
 	color: @black70;
-	font-size: 18px;
-	font-family: "OpenSans", Calibri, "Lucida Grande", Verdana, sans-serif;
-	line-height: 1.5;
+	#font > .sans-serif();
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
 	margin: 0;
 	padding: 0;
-}
+	}
 
 .container {
 	margin: 0 auto;
@@ -193,7 +228,7 @@ footer {
 h1, h2, h3 {
 	margin-top: 1.5em;
 	margin-bottom: 0;
-	font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+	#font > .display();
 	font-weight: bold;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	}
@@ -202,10 +237,6 @@ h1 {
 	color: @red;
 	font-size: 5em;
 	margin-top: .5em;
-	
-	span {
-		.rain(@red);
-		}
 	
 	small {
 		color: @black40;
@@ -223,41 +254,6 @@ h1 {
 		border-color: @black50;
 		color: @black80;
 		}
-	
-	/*
-@color: @red;
-	.char1 {
-			.rain(@color);
-		}
-		.char2 {
-			.rain(spin(@color, 2));
-		}
-		.char3 {
-			.rain(spin(@color, 4));
-		}
-		.char4 {
-			.rain(spin(@color, 6));
-		}
-		.char5 {
-			.rain(spin(@color, 8));
-		}
-		.char6 {
-			.rain(spin(@color, 10));
-		}
-		.char7 {
-			.rain(spin(@color, 12));
-		}
-		.char8 {
-			.rain(spin(@color, 14));
-		}
-		.char9 {
-			.rain(spin(@color, 16));
-		}
-		.char10 {
-			.rain(spin(@color, 18));
-		}
-*/
-
 }
 
 h2 {
@@ -298,7 +294,7 @@ a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+	#font > .display();
 	font-size: 1.333em;
 	line-height: 1.5;
 	margin: 1em 0 3em;
@@ -345,7 +341,6 @@ a {
 }
 
 
-
 // Horizontal rules
 hr {
 	display: block;
@@ -357,11 +352,15 @@ hr {
 }
 
 // Download
-.download {
+.project .download {
 	display: inline-block;
 	float: right;
 	margin: 1.25em 0 2em 5%;
 	width: 40%;
+	}
+
+.download {
+	#font > .display();
 
 	p {
 		color: @black30;
@@ -389,9 +388,8 @@ hr {
 		color: @white90;
 		border: none;
 		float: left;
-		font-size: .9em;
 		line-height: 1.125;
-		padding: .25em .25em 0 3.5em;
+		padding: .25em .25em 0 80px;
 		width: auto;
 		-webkit-transition: all .3s;
 		-moz-transition: all .3s;
@@ -498,6 +496,7 @@ hr {
 	}
 
 
+
 // Code
 code,
 pre {
@@ -550,3 +549,36 @@ pre code .line::before {
 	width: 13px;
 	text-align: right;
 }
+
+
+
+// gh-pages
+.gh-pages .project {
+	margin: 1em -1.25em 3em;
+	padding: 0 1.25em 1.25em;
+	}
+
+.gh-pages h1 {
+	font-size: 3.5em;
+	text-shadow: 0 1px 0 @black15, 0 1px 3px @black10, 0 2px 6px @black3;
+	
+	small {
+		margin-left: -.5em;
+		}
+	}
+
+
+// About
+.about img {
+	float: left;
+	
+	-webkit-box-shadow:	0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	-moz-box-shadow:	0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	box-shadow:			0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	
+	-webkit-border-radius:	3px;
+	-moz-border-radius:		3px;
+	border-radius:			3px;
+	
+	margin: 0 1.5em 0 0;
+	}

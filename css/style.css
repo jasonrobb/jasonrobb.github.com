@@ -362,6 +362,10 @@ body {
   color: #cc8033;
   text-shadow: -1px 0 1px #d6995c, 1px 0 1px #d6995c, -1px 1px 0 #b8732e, -1px 2px 0 #b4702d, -1px 3px 0 #af6e2c, -1px 4px 0 #ab6b2b, -1px 5px 1px #8f5924, 1px 1px 0 #b8732e, 1px 2px 0 #b4702d, 1px 3px 0 #af6e2c, 1px 4px 0 #ab6b2b, 1px 5px 1px #8f5924, 0 6px 4px rgba(215, 156, 96, 0.84), 0 -6px 8px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+h1 span {
+  color: #cc3333;
+  text-shadow: -1px 0 1px #d65c5c, 1px 0 1px #d65c5c, -1px 1px 0 #b82e2e, -1px 2px 0 #b42d2d, -1px 3px 0 #af2c2c, -1px 4px 0 #ab2b2b, -1px 5px 1px #8f2424, 1px 1px 0 #b82e2e, 1px 2px 0 #b42d2d, 1px 3px 0 #af2c2c, 1px 4px 0 #ab2b2b, 1px 5px 1px #8f2424, 0 6px 4px rgba(215, 96, 96, 0.84), 0 -6px 8px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 /* !========= */
 /* != Reset = */
 /* ========== Details: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/  */
@@ -494,8 +498,11 @@ th {
 body {
   background-color: #f2f0ed;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 18px;
   font-family: "OpenSans", Calibri, "Lucida Grande", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 18px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -556,6 +563,9 @@ h3 {
   margin-top: 1.5em;
   margin-bottom: 0;
   font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
   font-weight: bold;
   text-rendering: optimizelegibility;
 }
@@ -563,44 +573,6 @@ h1 {
   color: #cc3333;
   font-size: 5em;
   margin-top: .5em;
-  /*
-@color: @red;
-	.char1 {
-			.rain(@color);
-		}
-		.char2 {
-			.rain(spin(@color, 2));
-		}
-		.char3 {
-			.rain(spin(@color, 4));
-		}
-		.char4 {
-			.rain(spin(@color, 6));
-		}
-		.char5 {
-			.rain(spin(@color, 8));
-		}
-		.char6 {
-			.rain(spin(@color, 10));
-		}
-		.char7 {
-			.rain(spin(@color, 12));
-		}
-		.char8 {
-			.rain(spin(@color, 14));
-		}
-		.char9 {
-			.rain(spin(@color, 16));
-		}
-		.char10 {
-			.rain(spin(@color, 18));
-		}
-*/
-
-}
-h1 span {
-  color: #cc3333;
-  text-shadow: -1px 0 1px #d65c5c, 1px 0 1px #d65c5c, -1px 1px 0 #b82e2e, -1px 2px 0 #b42d2d, -1px 3px 0 #af2c2c, -1px 4px 0 #ab2b2b, -1px 5px 1px #8f2424, 1px 1px 0 #b82e2e, 1px 2px 0 #b42d2d, 1px 3px 0 #af2c2c, 1px 4px 0 #ab2b2b, 1px 5px 1px #8f2424, 0 6px 4px rgba(215, 96, 96, 0.84), 0 -6px 8px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 h1 small {
   color: rgba(0, 0, 0, 0.4);
@@ -650,6 +622,9 @@ a {
   -moz-border-radius: 6px;
   border-radius: 6px;
   font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
   font-size: 1.333em;
   line-height: 1.5;
   margin: 1em 0 3em;
@@ -694,11 +669,17 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
-.download {
+.project .download {
   display: inline-block;
   float: right;
   margin: 1.25em 0 2em 5%;
   width: 40%;
+}
+.download {
+  font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
 }
 .download p {
   color: rgba(0, 0, 0, 0.3);
@@ -723,9 +704,8 @@ hr {
   color: rgba(255, 255, 255, 0.9);
   border: none;
   float: left;
-  font-size: .9em;
   line-height: 1.125;
-  padding: .25em .25em 0 3.5em;
+  padding: .25em .25em 0 80px;
   width: auto;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -877,4 +857,25 @@ pre code .line::before {
 
   width: 13px;
   text-align: right;
+}
+.gh-pages .project {
+  margin: 1em -1.25em 3em;
+  padding: 0 1.25em 1.25em;
+}
+.gh-pages h1 {
+  font-size: 3.5em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+.gh-pages h1 small {
+  margin-left: -0.5em;
+}
+.about img {
+  float: left;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 1.5em 0 0;
 }
