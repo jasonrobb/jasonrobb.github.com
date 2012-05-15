@@ -1,0 +1,15 @@
+# Local URLs
+Redirect /3D-text http://github.3D-text
+Redirect /coda-seestyles http://github.coda-seestyles
+Redirect /framework http://github.framework
+Redirect /gists http://github.gists
+Redirect /more-colors http://github.more-colors
+Redirect /status http://github.status
+
+# Live URLs
+Redirect /3D-text http://github.3D-text
+Redirect /coda-seestyles http://github.coda-seestyles
+Redirect /framework http://github.framework
+Redirect /gists http://github.gists
+Redirect /More-Colors.less http://github.more-colors
+Redirect /status http://github.status
